@@ -10,6 +10,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,6 +26,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
  */
 @Controller
 @SpringBootApplication
+@EnableScheduling
 //@Configuration
 //@ComponentScan(basePackages={"com.lmx"})
 public class HelloApplication extends SpringBootServletInitializer {
