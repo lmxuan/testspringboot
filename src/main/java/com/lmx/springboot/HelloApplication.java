@@ -1,5 +1,6 @@
 package com.lmx.springboot;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +26,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 @Controller
 @SpringBootApplication
 @EnableScheduling
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 //@Configuration
 //@ComponentScan(basePackages={"com.lmx"})
 public class HelloApplication extends SpringBootServletInitializer {
@@ -67,7 +68,7 @@ public class HelloApplication extends SpringBootServletInitializer {
 	
 	public static void main(String[] args){
 		SpringApplication application = new SpringApplication(HelloApplication.class);
-//		application.setBannerMode(Banner.Mode.OFF);
+		application.setBannerMode(Banner.Mode.OFF);
 		application.run(args);
 	}
 }
