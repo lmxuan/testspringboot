@@ -4,7 +4,7 @@
 	<groupId>com.lmx.springboot</groupId>
 	<artifactId>testspringboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<!-- 设置springboot的parent -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
