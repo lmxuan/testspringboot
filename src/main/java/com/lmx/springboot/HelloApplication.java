@@ -1,15 +1,13 @@
 package com.lmx.springboot;
 
-import java.nio.charset.Charset;
-
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,14 +25,15 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 @Controller
 @SpringBootApplication
 @EnableScheduling
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 //@Configuration
 //@ComponentScan(basePackages={"com.lmx"})
 public class HelloApplication extends SpringBootServletInitializer {
 	
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(HelloApplication.class);
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//		return builder.sources(HelloApplication.class);
+//	}
 	
 	@RequestMapping("hello")
 	@ResponseBody

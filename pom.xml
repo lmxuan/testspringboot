@@ -40,16 +40,16 @@
 		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-webmvc</artifactId> 
 			<version>4.3.7.RELEASE</version> </dependency> -->
 		<!-- 连接池 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.jolbox</groupId>
 			<artifactId>bonecp-spring</artifactId>
 			<version>0.8.0.RELEASE</version>
-		</dependency>
+		</dependency> -->
 		<!-- 添加MySQL的依赖 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
+		</dependency> -->
 		<!-- 添加springboot-data-jpa的依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
